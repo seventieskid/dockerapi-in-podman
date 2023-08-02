@@ -1,3 +1,7 @@
+# Background
+
+https://www.redhat.com/sysadmin/podman-inside-container
+
 # Create Google VM in GCP Console
 podman-rhel-8-8 (same as GCP Slaves)
 RHEL-8
