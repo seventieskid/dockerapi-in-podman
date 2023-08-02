@@ -12,7 +12,7 @@ gcloud compute ssh --zone "europe-west2-a" "podman-rhel-8-8-final" --project "k8
 
 useradd jenbld
 
-dnf install podman -y -v
+dnf -yv install podman
 podman info (as root)
 
 remoteSocket:
