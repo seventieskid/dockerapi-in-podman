@@ -1,0 +1,13 @@
+apiVersion: skaffold/v4beta6
+kind: Config
+build:
+  local:
+    push: false
+    useDockerCLI: false
+    useBuildkit: false
+    concurrency: 0
+  artifacts:
+  - image: skaffold-example-from-inside-a-container
+    docker:
+      buildArgs:
+        MESSAGE_ARG: 'Hello from Skaffold!'
