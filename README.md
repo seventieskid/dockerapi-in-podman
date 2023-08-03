@@ -8,6 +8,7 @@ RHEL-8
 All APIs
 
 # SSH into VM (as root)
+```
 gcloud compute ssh --zone "europe-west2-a" "podman-rhel-8-8-final" --project "k8s-play-unique"
 
 useradd jenbld
@@ -32,11 +33,11 @@ podman info
 
 remoteSocket:
   path: /run/user/1002/podman/podman.sock
-
+```
 -------------
 
 [as jenbld]
-
+```
 vi Dockerfile
 
 podman build --build-arg=CLOUD_SDK_VERSION=441.0.0 -t google-sdk-441-sans-docker .
@@ -51,5 +52,5 @@ podman run -it --rm \
 Create your skaffold files manually from remote-skaffold, then:-
 
 skaffold build -f skaffold.yaml
-
+```
 (Will create an image on the GCP VM NOT that will persist)
