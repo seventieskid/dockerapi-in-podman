@@ -7,8 +7,9 @@ podman-rhel-8-8 (same as GCP Slaves)
 RHEL-8
 All APIs
 
-# SSH into VM (as root)
+# SSH into VM
 ```
+# ROOT !!!
 gcloud compute ssh --zone "europe-west2-a" "podman-rhel-8-8-final" --project "k8s-play-unique"
 
 useradd jenbld
@@ -19,7 +20,7 @@ podman info (as root)
 remoteSocket:
     path: /run/podman/podman.sock
 
-# SSH into VM (as jenbld)
+# JENBLD !!!
 gcloud compute ssh --zone "europe-west2-a" "jenbld@podman-rhel-8-8-final" --project "k8s-play-unique"
 
 systemctl --user status podman.socket (expect disabled)
